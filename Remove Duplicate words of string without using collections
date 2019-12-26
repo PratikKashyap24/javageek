@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class RemoveDuplicate {
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the String :");
+		String str=s.nextLine();
+		s.close();
+		String []words=str.split(" ");
+		for (int i = 0; i < words.length; i++) {
+			if(words[i]!=null) {
+				for (int j=i+1; j <words.length; j++) {
+					if (words[i].equals(words[j])) {
+						words[j]=null;
+					}
+				}
+			}
+		}
+		for (int i = 0; i < words.length; i++) {
+			if(words[i]!=null) {
+				System.out.print(words[i]+" ");
+			}
+			else {
+				continue;
+
+			}
+		}
+	}
+}
