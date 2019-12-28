@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Amstrong {
+
+	public static void main(String[] args) {
+
+		Scanner S=new Scanner(System.in);
+		int num=S.nextInt();
+		S.close();
+		int num1=num;
+		int count=0;
+		while(num1>0) {
+			count++;
+			num1=num1/10;
+		}
+		num1=num;
+		int sum=0;
+		while(num1>0) {
+			int digit=num%10;
+
+			int pow=count;
+			int prod=1;
+			while(pow>0) {
+				prod=prod*digit;
+
+			}
+			sum=sum+prod;
+			num1=num1/10;
+		}
+		if(num==sum) {
+			System.out.println("Amstrong number");
+
+		}
+		else {
+			System.out.println("Not an Amstrong number");
+		}
+	}
+
+
+}
