@@ -1,0 +1,33 @@
+public class GetSetter {
+	private int id;
+	private String name;
+	private double sal;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getSal() {
+		return sal;
+	}
+	public void setSal(double sal) {
+		this.sal = sal;
+	}
+  public static void main(String[] args) {
+	GetSetter gs=new GetSetter();
+	gs.setName("JAVA");
+	gs.setId(10);
+	gs.setSal(47398.243);
+	
+	System.out.println(gs.getName());
+	System.out.println(gs.getId());
+	System.out.println(gs.getSal());
+}
+}
