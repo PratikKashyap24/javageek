@@ -1,0 +1,25 @@
+import java.util.HashSet;
+import java.util.Scanner;
+
+
+public class RemoveElements {
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the Size of array");
+		int size=s.nextInt();
+		int arr[]=new int[size];
+
+		for(int i=0;i<arr.length;i++) {
+			System.out.println("Enter the element in the array: ");		
+			arr[i]=s.nextInt();
+		}
+		s.close();
+	
+	HashSet<Integer> hs=new HashSet<>();
+     for(int i=0;i<arr.length;i++) {
+         hs.add(arr[i]);	 
+     }
+     System.out.println(hs);
+}
+	
+}
