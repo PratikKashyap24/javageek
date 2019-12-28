@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class PrimeSeries {
+	public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the starting Value : ");
+        int st=s.nextInt();
+        System.out.println("Enter the last Value : ");
+        int ls=s.nextInt();
+        s.close();
+		for(int i=st;i<=ls;i++) {
+			boolean rs=	getPrimeSeries(i);
+			if(rs==true)
+				System.out.println(i);
+
+		}
+
+	}
+
+	public static boolean getPrimeSeries(int i) {
+		int n=2;
+		while(n<=i/2) {
+			if(i%n==0) {
+				return false;	
+
+			}
+			n++;
+		}
+
+
+		return true;
+
+
+	}
+}
+
+
