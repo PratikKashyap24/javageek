@@ -2,17 +2,27 @@ package Preprograms;
 
 import java.util.Scanner;
 
-public class ReverseWord {
+public class InitCapital {
 	public static void main(String []a) {
+
 		Scanner s=new Scanner(System.in);
-		System.out.println("Enter the senctence");
-		String str=s.nextLine();
+		System.out.println("Enter the sentence");
+		String str=s.nextLine().toLowerCase();
 		s.close();
-		String str1[]=str.split(" ");
-		String str2="";
-		for (int i = str1.length-1; i >=0 ; i--) {
-			str2=str2+str1[i]+" ";
+		char arr[]=str.toCharArray();
+		arr[0]=(char)(arr[0]-32);
+
+		for(int i=1;i<str.length();i++) {
+
+			if(arr[i]==' ') {
+				arr[i+1]=(char)(arr[i+1]-32);
+			}
+
 		}
-		System.out.println(str2);
+		for (int i = 0; i < arr.length; i++) 
+		{
+			System.out.print(arr[i]);
+		}
+
 	}
 }
