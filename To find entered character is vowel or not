@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Vowel {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the charcter- ");
+		char ch=s.next().charAt(0);
+		s.close();
+
+
+		switch(ch)
+		{
+
+		case 'a':
+
+		case 'e':
+
+
+		case'i':
+
+
+		case 'o':
+
+
+		case 'u':
+			System.out.println("vowel");
+			break;
+		default :
+			System.out.println("consonant");
+
+		}
+
+	}
+}
+
+
