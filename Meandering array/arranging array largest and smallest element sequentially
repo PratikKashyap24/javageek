@@ -1,0 +1,33 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class MainMendring {
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the size of array :");
+		int size=s.nextInt();
+		int arr[]=new int[size];
+		for (int i = 0; i < arr.length; i++) {
+			System.out.println("Enter the Element :");
+			arr[i]=s.nextInt();
+
+		}
+
+		Arrays.sort(arr);
+		int brr[]=new int[arr.length];
+		int k=0;
+		for (int i=0,j=arr.length-1; i <=j; i++,j--) {
+			brr[k++]=arr[j];
+			if(k<brr.length) {
+				brr[k++]=arr[i];
+			}
+
+
+		}
+		for (int i : brr) {
+			System.out.print(i+",");
+		}
+		s.close();
+
+	}
+}
