@@ -1,0 +1,19 @@
+package dataStructure;
+
+public class SinglyLinkedListRunner {
+	public static void main(String[] args) {
+		SinglyLinkedList sl=new SinglyLinkedList();
+		sl.add("JAVA");
+		sl.add("SQL");
+		sl.add("jdbc");
+		System.out.println(sl);
+		sl.addFirst("corejava");
+		System.out.println(sl);
+		System.out.println(sl.deleteFirst());
+		System.out.println(sl);
+		System.out.println(sl.deleteLast());
+		System.out.println(sl);
+		sl.reverse();
+		System.out.println(sl);
+	}
+}
