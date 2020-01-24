@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class LcmOfThreeNumbers{
+public static void main(String[] args) {
+	Scanner s=new Scanner(System.in);
+	System.out.println("Enter the first Number : ");
+	int n1=s.nextInt();
+	System.out.println("Enter the Second Number : ");
+	int n2=s.nextInt();
+	System.out.println("Enter the Third Number : ");
+	int n3=s.nextInt();
+	int lcm=(n1>n2)?(n1>n3)?n1:n3:(n2>n3)?n2:n3;
+     while (true) {
+		if(lcm%n1==0&&lcm%n2==0&&lcm%n3==0) {
+			System.out.println("The Lcm of the Numbers is :"+lcm);
+			break;
+		}
+		++lcm;
+	}
+     s.close();
+}
+}
