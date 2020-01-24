@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class GcdOfTwoNumber {
+public static void main(String[] args) {
+	Scanner s=new Scanner(System.in);
+	System.out.println("Enter the first Number : ");
+	int n1=s.nextInt();
+	System.out.println("Enter the Second  Number : ");
+	int n2=s.nextInt();
+	s.close();
+	while(n1!=n2) {
+		if(n1>n2) {
+			n1=n1-n2;
+		}
+		else {
+			n2=n2-n1;
+		}
+	}
+	System.out.println("The gcd of two Number is : "+n2 );
+}
+}
