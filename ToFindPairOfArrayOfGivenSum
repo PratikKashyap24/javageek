@@ -1,0 +1,28 @@
+import java.util.Arrays;
+import java.util.HashMap;
+
+public class PairAraay {
+public static void main(String[] args) {
+	int arr[]= {23,43,11,10,23,10,11};
+	int sum=21;
+	int brr[]=solve(arr,sum);
+	
+	System.out.println(Arrays.toString(brr));
+		
+}
+
+private static int[] solve(int[] arr, int sum) {
+	HashMap<Integer, Integer> hs=new HashMap<Integer, Integer>();
+	for (int i = 0; i < arr.length; i++) {
+		hs.put(arr[i],i );
+		
+	}
+	for (int i = 0; i < arr.length; i++) {
+		int numTofind= sum-arr[i];
+		if(hs.containsKey(numTofind)&&hs.get(numTofind)!=i) {
+			return new int[] {i,hs.get(numTofind)};
+		}
+	}
+	return null;
+}
+}
