@@ -1,0 +1,98 @@
+public class SinglyLinkedList {
+
+	class Node{
+		Node next;
+		Object data;
+
+		Node(Object data){
+			this.data=data;
+
+		}
+	}
+	Node head;
+	public boolean add(Object data) {
+		Node n=new Node(data);
+		if(head==null) {
+			head=n;
+			return true;
+
+		}
+		Node t=head;
+		while(t.next!=null){
+			t=t.next;
+		}
+		t.next=n;
+		return true;
+	}
+
+	public boolean addFirst(Object data) {
+		Node n=new Node(data);
+		n.next=head;
+		head=n;
+		return true;
+
+
+	}
+
+	public Object deleteFirst() {
+		if(head==null) {
+			System.out.println("List is empty");
+			return null;
+		}
+		Object data=head.data;
+		head=head.next;
+		return data;
+	}
+	public Object deleteLast() {
+		if(head==null){
+			System.out.println("List Is Empty");
+			return null;
+
+		}
+		Node t=head;
+		Node t1=head;
+		while(t.next!=null) {
+			t1=t;
+			t=t.next;
+
+		}
+		if(t.next!=null) {
+			head=null;
+		}
+		else 
+			t1.next=null;
+		return t.data;
+	}
+
+	public void reverse() {
+		Node prev=null;
+		Node next=null;
+		Node curr=head;
+		while(curr!=null) {
+			next=curr.next;
+			curr.next=prev;
+			prev=curr;
+			curr=next;
+
+		}
+
+		head=prev;
+
+	}
+	@Override
+
+	public String toString()
+	{    Node t=head;
+	String str="[";
+	while(t!=null) {
+		str=str+t.data;
+		if(t.next!=null) {
+			str=str+"<=>";
+		}
+		t=t.next;
+
+	}
+	return str+"]";
+	}
+
+}
